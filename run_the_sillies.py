@@ -9,6 +9,7 @@ from awexis_bot import awexis
 from tye_bot import tye
 from gabriel_bot import gabriel
 
+
 async def main():
     harry_task = asyncio.create_task(harry.start(os.environ["HARRY_TOKEN"]))
     aweggy_task = asyncio.create_task(awexis.start(os.environ["AWEGGY_TOKEN"]))
@@ -22,6 +23,7 @@ async def main():
     await harry_task
     await jasprose_task
     await gabriel_task
+
 
 if __name__ == "__main__":
     asyncio.run(main())
